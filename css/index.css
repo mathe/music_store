@@ -1,0 +1,8 @@
+#artista_bandas_mais_visitadas, #cds_mais_comprados, #dvds_mais_comprados{
+  margin-top: 3px;
+  border: 1px solid black;/*somente para teste.*/
+}
+
+main, aside, footer{
+  margin-top: 3px;
+}
