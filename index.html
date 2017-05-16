@@ -8,89 +8,97 @@
     <script src="js/bootstrap.min.js"></script>     
     <title>Music Store</title>
   </head>
-  <body>    
-    <div class="container">
+  <body>  
+    <header class="container">   
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <header>      
-            <nav id="nav_paginas" class="navbar navbar-default">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                      <a href="cadastro.html" class="btn btn-link">Cadastre-se</a>
-                    </li>
-                  </ul>
-                </div>                  
-              </div>                
-            </nav>
-          </header>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">               
+          <nav id="nav_paginas" class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a href="cadastro.html" class="btn btn-link">Cadastre-se</a>
+                  </li>
+                </ul>
+              </div>                  
+            </div>                
+          </nav>          
         </div>
       </div>
-      
+    </header>
+    
+    <main class="container">                
       <div class="row">
-        <main>      
-          <div class="row">
-            <div class="col-lg-12">
-              <nav id="generos"> 
-                generos..
-              </nav>         
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <nav id="generos"> 
+            generos..
+          </nav>         
+        </div>
+      </div>
+        
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <nav id="artista_banda">      
+            artista/banda..
+          </nav>
+        </div>
+      </div>
+        
+        <!-- isso vai ser um modal-alike.
+        <div class="row">
+          <div class="col-lg-12">
+            <section id="musicas_de_artista_banda">      
+              musicas de artista / banda.
+            </section>
+          </div>
+        </div>
+      -->             
+      <div class="row">
+        <div class="col-lg-4">
+          <section id="artista_bandas_mais_visitadas">  
+            artistas mais visitados.    
+          </section>
+        </div>  
+        
+        <div class="col-lg-4">
+          <section id="cds_mais_comprados">      
+            cds mais comprados.
+          </section>
+        </div>  
+        
+        <div class="col-lg-4">
+          <section id="dvds_mais_comprados">      
+            dvds mais comprados.
+          </section>
+        </div>  
+      </div>          
+    </main>
+    
+    <aside class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">              
+          <div class="card text-center">
+            <div class="card-header">
+              Área destinada para alguma propaganda.
             </div>
-          </div>
-          
-          <div class="row">
-            <div class="col-lg-12">
-              <nav id="artista_banda">      
-                artista/banda..
-              </nav>
+            <div class="card-block">
+              Propaganda...
             </div>
-          </div>
-          
-          <!-- isso vai ser um modal-alike.
-          <div class="row">
-            <div class="col-lg-12">
-              <section id="musicas_de_artista_banda">      
-                musicas de artista / banda.
-              </section>
+          </div>                      
+        </div>
+      </div>     
+    </aside>
+      
+    <footer class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="card">
+            <div class="card-block">
+              Auno: Matheus Dall'Rosa
             </div>
-          </div>
-        -->
-          
-          <div class="row">
-            <div class="col-lg-4">
-              <section id="artista_bandas_mais_visitadas">  
-                artistas mais visitados.    
-              </section>
-            </div>  
-            
-            <div class="col-lg-4">
-              <section id="cds_mais_comprados">      
-                cds mais comprados.
-              </section>
-            </div>  
-            
-            <div class="col-lg-4">
-              <section id="dvds_mais_comprados">      
-                dvds mais comprados.
-              </section>
-            </div>  
-          </div>
-          
-          <div class="row">
-            <div class="col-lg-12">
-              <aside class="propaganda">      
-                propaganda...
-              </aside>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="col-lg-12">
-              <footer>Aluno: Matheus Dall'Rosa</footer>
-            </div>
-          </div>
-        </main>
-      </div>  
-    </div>
+          </div>                 
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
