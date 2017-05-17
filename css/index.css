@@ -1,6 +1,17 @@
-#artista_bandas_mais_visitadas, #cds_mais_comprados, #dvds_mais_comprados{
-  margin-top: 3px;
-  border: 1px solid black;/*somente para teste.*/
+html, body{
+    height: 100%;
+}
+
+body{
+  overflow-y: scroll;
+}
+
+main{
+  height: 60%;
+}
+
+header, aside, footer{
+  height: 10%;
 }
 
 main, aside, footer{
@@ -9,6 +20,23 @@ main, aside, footer{
 
 #generos, #artista_banda{
   margin-bottom: 5px;
+}
+
+#generos, #artista_banda{
+  height: 35%;
+}
+
+#destaque div{
+  height: 100%;
+  border: 1px solid black;/*somente para teste.*/
+}
+
+#artista_bandas_mais_visitadas, #cds_mais_comprados, #dvds_mais_comprados{
+  margin-top: 3px;  
+}
+
+#destaque{
+  height: 59%;
 }
 
 li .card{
