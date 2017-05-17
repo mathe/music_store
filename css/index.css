@@ -1,9 +1,9 @@
-html, body{
-    height: 100%;
+html{
+  overflow-y: scroll;
 }
 
-body{
-  overflow-y: scroll;
+html, body{
+  height: 100%;
 }
 
 main{
