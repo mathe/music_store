@@ -2,3 +2,4 @@ NavBar
 Buttons
 Forms
 Card
+Thumbnail
