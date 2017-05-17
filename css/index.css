@@ -6,37 +6,21 @@ html, body{
   height: 100%;
 }
 
-main{
-  height: 60%;
-}
-
-header, aside, footer{
-  height: 10%;
-}
-
 main, aside, footer{
   margin-top: 3px;
 }
 
-#generos, #artista_banda{
+main{
+  position: relative; 
+}
+
+#generos, #albuns{
   margin-bottom: 5px;
 }
 
-#generos, #artista_banda{
-  height: 35%;
-}
-
-#destaque div{
-  height: 100%;
-  border: 1px solid black;/*somente para teste.*/
-}
-
-#artista_bandas_mais_visitadas, #cds_mais_comprados, #dvds_mais_comprados{
+#generos_mais_visitados, #cds_mais_comprados, #dvds_mais_comprados{
   margin-top: 3px;  
-}
-
-#destaque{
-  height: 59%;
+  /*border-bottom: 1px solid #eee;*/
 }
 
 li .card{
