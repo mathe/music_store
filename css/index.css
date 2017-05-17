@@ -18,6 +18,10 @@ main{
   border-top: 1px solid #2BBBAD;
 }
 
+.content-separator{
+  border-top: 1px solid #4B515D;  
+}
+
 #generos, #albuns{
   margin-bottom: 5px;
 }
