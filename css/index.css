@@ -6,3 +6,12 @@
 main, aside, footer{
   margin-top: 3px;
 }
+
+#generos, #artista_banda{
+  margin-bottom: 5px;
+}
+
+li .card{
+  margin: 1px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
