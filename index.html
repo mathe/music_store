@@ -30,63 +30,17 @@
     </header>
     
     <main class="container">                
-      <div id="generos" class="row">
-        
-      </div>
+      <div id="generos" class="row"></div>
         
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">          
           <hr class="section-separator">
-          <h5>CDs e DVDs do gênero selecionado</h5>          
+          <h5 id="product-alert">Selecione um gênero músical.</h5>                    
         </div>
       </div>
       
-      <div id="albuns" class="row">
-        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">                    
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/400/200/" alt="album 1">
-            <div class="caption">
-              <h3>Nome do cd 1.</h3>
-              <p>Breve descrição de cd 1</p>
-              <p><button type="button" class="btn btn-primary btn-lg" id="cd1" data-toggle="modal" data-target="#myModal">Ver Músicas</button></p>
-            </div>
-          </div>                    
-        </div>
-        
-        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">                    
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/400/201/" alt="album 2">
-            <div class="caption">
-              <h3>Nome do dvd 2.</h3>
-              <p>Breve descrição de dvd 2</p>
-              <p><button type="button" class="btn btn-primary btn-lg" id="dvd2" data-toggle="modal" data-target="#myModal">Ver Músicas</button></p>
-            </div>
-          </div>                      
-        </div>
-        
-        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">                    
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/400/202/" alt="album 3">
-            <div class="caption">
-              <h3>Nome do dvd 3.</h3>
-              <p>Breve descrição de dvd 3</p>
-              <p><button type="button" class="btn btn-primary btn-lg" id="dvd3" data-toggle="modal" data-target="#myModal">Ver Músicas</button></p>
-            </div>
-          </div>                      
-        </div>
-        
-        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">                    
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/400/203/" alt="album 4">
-            <div class="caption">
-              <h3>Nome do cd 4.</h3>
-              <p>Breve descrição de cd 4</p>
-              <p><button type="button" class="btn btn-primary btn-lg" id="cd4" data-toggle="modal" data-target="#myModal">Ver Músicas</button></p>
-            </div>
-          </div>  
-        </div>                    
-      </div>        
-      
+      <div id="albuns" class="row"></div>
+            
       <!-- Inicio Modal. -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -114,7 +68,7 @@
             
       <div id="destaque" class="row">
         <div  id="generos_mais_visitados" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <section class="card">              
+          <section id="section_generos_mais_visitados" class="card">              
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">         
                 <h4>Gêneros mais visitados</h4>
@@ -127,7 +81,7 @@
                 <div class="card">
                   <h4 class="card-title">Gênero 2</h4>
                   <p class="card-text">Breve descrição do Gênero 2.</p>
-                  <button type="button" class="btn btn-info" id="genero2">Ver bandas/artistas</button>
+                  <button type="button" class="btn btn-info gender-card" id="2">Ver CDs/DVDs</button>
                 </div>                              
               </div>
             </div>           
@@ -143,7 +97,7 @@
                   <p class="card-text">
                     Breve descrição do Gênero 3.
                   </p>
-                  <button type="button" class="btn btn-info" id="genero3">Ver bandas/artistas</button>
+                  <button type="button" class="btn btn-info gender-card" id="3">Ver CDs/DVDs</button>
                 </div>                              
               </div>
             </div>   
@@ -159,7 +113,7 @@
                   <p class="card-text">
                     Breve descrição do Gênero 5.
                   </p>
-                  <button type="button" class="btn btn-info" id="genero5">Ver bandas/artistas</button>
+                  <button type="button" class="btn btn-info gender-card" id="5">Ver CDs/DVDs</button>
                 </div>                              
               </div>
             </div>             
@@ -186,7 +140,9 @@
                   <div class="caption">
                     <h3>Nome do cd 1.</h3>
                     <p>Breve descrição de cd 1</p>
-                    <p><button type="button" class="btn btn-primary" id="cd1">Ver Músicas</button></p>
+                    <p>
+                      <button type="button" class="btn btn-primary btn-lg" id="cd1" data-toggle="modal" data-target="#myModal">Ver Músicas</button>
+                    </p>
                   </div>
                 </div>                    
               </div>
@@ -203,7 +159,9 @@
                   <div class="caption">
                     <h3>Nome do cd 4.</h3>
                     <p>Breve descrição de cd 4</p>
-                    <p><button type="button" class="btn btn-primary" id="cd4">Ver Músicas</button></p>
+                    <p>
+                      <button type="button" class="btn btn-primary btn-lg" id="cd4" data-toggle="modal" data-target="#myModal">Ver Músicas</button>
+                    </p>
                   </div>
                 </div>  
               </div> 
@@ -231,7 +189,9 @@
                   <div class="caption">
                     <h3>Nome do dvd 2.</h3>
                     <p>Breve descrição de dvd 2</p>
-                    <p><button type="button" class="btn btn-primary" id="dvd2">Ver Músicas</button></p>
+                    <p>
+                      <button type="button" class="btn btn-primary btn-lg" id="dvd2" data-toggle="modal" data-target="#myModal">Ver Músicas</button>
+                    </p>
                   </div>
                 </div>                      
               </div>
@@ -249,7 +209,9 @@
                   <div class="caption">
                     <h3>Nome do dvd 3.</h3>
                     <p>Breve descrição de dvd 3</p>
-                    <p><button type="button" class="btn btn-primary" id="dvd3">Ver Músicas</button></p>
+                    <p>
+                      <button type="button" class="btn btn-primary btn-lg" id="dvd3" data-toggle="modal" data-target="#myModal">Ver Músicas</button>
+                    </p>
                   </div>
                 </div>                      
               </div>
@@ -269,7 +231,7 @@
       </div>
     </div>
     
-    <!-- Inicio Propaganda_-->
+    <!-- Inicio carosel-->
     <aside class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-4">
@@ -320,7 +282,7 @@
         </div>
       </div>     
     </aside>
-    <!-- Fim da Propanda. -->
+    <!-- Fim do carousel. -->
     
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">          
