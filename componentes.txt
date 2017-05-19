@@ -8,3 +8,4 @@ Thumbnail
 JS:
 Modal
 Carousel
+Tooltip
