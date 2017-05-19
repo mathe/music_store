@@ -6,7 +6,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">    
     <link href="css/cadastro.css" rel="stylesheet">    
     <script src="js/jquery-3.2.1.min.js"></script>    
-    <script src="js/bootstrap.min.js"></script>     
+    <script src="js/bootstrap.min.js"></script>         
     <title>Cadastro de Usuário</title>
   </head>
   <body>
@@ -32,7 +32,7 @@
       <div class="row">                  
         <div class="col-xs-10 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-2 col-lg-5 col-lg-offset-3">        
           <section id="cadastro">
-            <form action="#" method="post">
+            <form id="cadastro_form" action="#" method="post">
               <div class="form-group row">
                 <div class="col-xs-9 col-sm-6 col-md-6 col-lg-6 my-group-member">                      
                   <input class="form-control" type="text" name="name" value="" placeholder="Seu nome" pattern=".{3,}" required>                                            
@@ -63,7 +63,7 @@
               
               <div class="form-group row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <input class="btn btn-default" type="submit" name="name" value="Enviar">
+                  <input id="cad_submit" class="btn btn-default" type="submit" name="name" value="Enviar">
                 </div>
               </div>                
             </form>
@@ -71,5 +71,91 @@
         </div>         
       </div>
     </main>
+    <script type="text/javascript">
+      $('input[name="name"]')
+        .on('keyup', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'Seu nome deve ter 3 ou mais caracteres.');
+        })
+        .on('keydown', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'Seu nome deve ter 3 ou mais caracteres.');
+        })
+        .on('keypress', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'Seu nome deve ter 3 ou mais caracteres.');
+        })
+        .on('invalid', function(){
+          return this.setCustomValidity('Seu nome deve ter 3 ou mais caracteres.');
+        })
+        .on('input', function(){
+          return this.setCustomValidity('');
+        });
+        
+      $('input[name="lastname"]')
+        .on('keyup', function(){          
+          return this.setCustomValidity(this.validity.valid ? '' : 'Seu sobrenome deve ter 3 ou mais caracteres.');
+        })
+        .on('keydown', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'Seu sobrenome deve ter 3 ou mais caracteres.');
+        })
+        .on('keypress', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'Seu sobrenome deve ter 3 ou mais caracteres.');
+        })
+        .on('invalid', function(){
+          return this.setCustomValidity('Seu sobrenome deve ter 3 ou mais caracteres.');
+        })
+        .on('input', function(){
+          return this.setCustomValidity('');
+        });
+        
+      $('input[name="password"]')
+        .on('keyup', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'A senha deve possuir 6 ou mais caracteres.');
+        })
+        .on('keydown', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'A senha deve possuir 6 ou mais caracteres.');
+        })
+        .on('keypress', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'A senha deve possuir 6 ou mais caracteres.');
+        })        
+        .on('invalid', function(){
+          return this.setCustomValidity('A senha deve possuir 6 ou mais caracteres.');
+        })
+        .on('input', function(){
+          return this.setCustomValidity('');
+        });
+        
+      $('input[name="rpassword"]')
+        .on('keyup', function(){          
+          return this.setCustomValidity(($('input[name="password"]').val() == this.value) ? '' : 'Repita sua senha neste campo.');
+        })
+        .on('keydown', function(){
+          return this.setCustomValidity(($('input[name="password"]').val() == this.value) ? '' : 'Repita sua senha neste campo.');
+        })
+        .on('keypress', function(){
+          return this.setCustomValidity(($('input[name="password"]').val() == this.value) ? '' : 'Repita sua senha neste campo.');
+        })
+        .on('invalid', function(){
+          return this.setCustomValidity(($('input[name="password"]').val() == this.value) ? '' : 'Repita sua senha neste campo.');
+        })
+        .on('input', function(){
+          return this.setCustomValidity('');
+        });
+        
+      $('input[name="email"]')
+        .on('keyup', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'Utilize um email válido: exemplo@email');
+        })
+        .on('keydown', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'Utilize um email válido: exemplo@email');
+        })
+        .on('keypress', function(){
+          return this.setCustomValidity(this.validity.valid ? '' : 'Utilize um email válido: exemplo@email');
+        })
+        .on('invalid', function(){
+          return this.setCustomValidity('Utilize um email válido: exemplo@email');
+        })
+        .on('input', function(){
+          return this.setCustomValidity('');
+        });      
+    </script>
   </body>
 </html>
