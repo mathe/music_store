@@ -32,32 +32,51 @@
       <div class="row">                  
         <div class="col-xs-10 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-2 col-lg-5 col-lg-offset-3">        
           <section id="cadastro">
+            <!--Inicio do componente form, dentro deste form é utilizado o componente tooltip do bootstrap javascript.-->
             <form id="cadastro_form" action="#" method="post">
               <div class="form-group row">
-                <div class="col-xs-9 col-sm-6 col-md-6 col-lg-6 my-group-member">                      
-                  <input class="form-control" type="text" name="name" value="" placeholder="Seu nome" pattern=".{3,}" required>                                            
+                <div class="col-xs-9 col-sm-6 col-md-6 col-lg-6 my-group-member">       
+                  <fieldset>
+                    <label for="name" class="sr-only">Seu Nome</label>
+                    <input class="form-control" type="text" name="name" value="" placeholder="Seu nome" pattern=".{3,}" required>                                            
+                    </input>           
+                  </fieldset>                                 
                 </div>
                 
                 <div class="col-xs-9 col-sm-6 col-md-6 col-lg-6 my-group-member">                      
-                  <input class="form-control" type="text" name="lastname" value="" placeholder="Seu sobrenome" pattern=".{3,}" required>                      
+                  <fieldset>
+                    <label for="lastname" class="sr-only">Seu Sobrenome</label>
+                    <input class="form-control" type="text" name="lastname" value="" placeholder="Seu sobrenome" pattern=".{3,}" required>           
+                    </input>           
+                  </fieldset>                  
                 </div>
               </div>
               
               <div class="form-group row">                    
                 <div class="col-xs-9 col-sm-6 col-md-6 col-lg-6 my-group-member">                      
-                  <input class="form-control" type="password" name="password" value="" placeholder="Sua senha" pattern=".{6,}" required>                      
+                  <fieldset>
+                    <label for="password" class="sr-only">Sua Senha</label>
+                    <input class="form-control" type="password" name="password" value="" placeholder="Sua senha" pattern=".{6,}" required>                      
+                    </input>           
+                  </fieldset>                  
                 </div>
                   
                 <div class="col-xs-9 col-sm-6 col-md-6 col-lg-6 my-group-member">                      
-                  <input class="form-control" type="password" name="rpassword" value="" placeholder="Sua senha novamente" pattern=".{6,}" required>  
-                  </input>                    
+                  <fieldset>
+                    <label for="rpassword" class="sr-only">Repita sua senha</label>
+                    <input class="form-control" type="password" name="rpassword" value="" placeholder="Repita sua senha" pattern=".{6,}" required>  
+                    </input>                    
+                  </fieldset>
                 </div>                                        
               </div>
               
               <div class="form-group row">
                 <div class="col-xs-9 col-sm-12 col-md-12 col-lg-12">                      
-                  <input class="form-control" type="email" name="email" value="" placeholder="Seu email" required>  
-                  </input>                    
+                  <fieldset>
+                    <label for="email" class="sr-only">Seu email</label>
+                    <input class="form-control" type="email" name="email" value="" placeholder="Seu email" required>  
+                    </input>
+                  </fieldset>                    
                 </div>
               </div>
               
@@ -67,11 +86,13 @@
                 </div>
               </div>                
             </form>
+            <!--Fim do form.-->
           </section>                   
         </div>         
       </div>
     </main>
     <script type="text/javascript">
+      /*Código em jquery para customizar as mensagens de validação do HTML5.*/
       $('input[name="name"]')
         .on('keyup', function(){
           return this.setCustomValidity(this.validity.valid ? '' : 'Seu nome deve ter 3 ou mais caracteres.');
