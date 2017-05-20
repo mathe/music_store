@@ -9,3 +9,4 @@ JS:
 Modal
 Carousel
 Tooltip
+Collapse - Accordion
