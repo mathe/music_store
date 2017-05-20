@@ -14,6 +14,7 @@
     <header class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <!--Inicio do menu de navegação.-->
           <nav id="nav_paginas" class="navbar navbar-default">
             <div class="container-fluid">
               <div class="navbar-header">
@@ -25,6 +26,7 @@
               </div>
             </div>
           </nav>
+          <!--Fim do menu de navegação. -->
         </div>
       </div>
     </header>
@@ -47,10 +49,55 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Músicas</h4>
+              <h4 class="modal-title" id="myModalLabel">Músicas(Quando utilizar banco de dados será mostrado as referentes músicas do DVD/CD desejado.)</h4>
             </div>
             <div class="modal-body">
-              Colocar um acordeon aqui com as músicas e a letra das músicas.
+              <!-- Inicio do Collapse-Accordion-->
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Música 1
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      Letra da música 1.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Música 2.
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      Letra da música 2.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Música 3.
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      Letra da música 3.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fim do Collapse-Accordion-->
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
@@ -67,8 +114,9 @@
       </div>
 
       <div id="destaque" class="row">
-        <div  id="generos_mais_visitados" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <section id="section_generos_mais_visitados" class="card">
+        <!--Os cards são utilizados em todas as divs dentro das seções dentro deste nodo. -->
+        <div  id="generos_mais_visitados" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">          
+          <section id="section_generos_mais_visitados">
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h4>Gêneros mais visitados</h4>
@@ -125,7 +173,7 @@
         </div>
 
         <div id="cds_mais_comprados" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <section class="card">
+          <section>
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h4>CDs mais vendidos</h4>
@@ -174,7 +222,7 @@
         </div>
 
         <div id="dvds_mais_comprados" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-          <section class="card">
+          <section>
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h4>DVDs mais vendidos</h4>
@@ -231,8 +279,8 @@
       </div>
     </div>
 
-    <!-- Inicio carosel-->
-    <aside class="container">
+    <!-- Inicio carousel(para propaganda) - não aparece em caso de impressão da página.-->
+    <aside class="container hidden-print">
       <div class="row">
         <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-4">
           <h5>Propaganda</h5>
